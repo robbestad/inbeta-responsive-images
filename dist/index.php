@@ -66,7 +66,7 @@ if (@$details->country === "NO") {
     </div>
 
 
-    <div class="row marketing col-centered">
+    <div class="row marketing">
     <div class="col-xs-12 ">
     This demo compares the result of using <em>
     <a href="http://caniuse.com/#search=srcset">&lt;srcset&gt;</a></em> or
