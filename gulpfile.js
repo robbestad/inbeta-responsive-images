@@ -214,15 +214,13 @@ gulp.task('watch', function () {
     gulp.watch(paths.scss, ['css']);
     gulp.watch('src/scss/**/*', ['css']);
     gulp.watch(paths.html, ['html']);
-    gulp.watch(paths.php, ['php2html']);
-    gulp.watch(paths.php, ['php']);
+    gulp.watch(paths.php, ['php', 'php2html']);
     gulp.watch(paths.images, ['images']);
 });
 
 // gulp main tasks
 gulp.task('default', ['css','jscripts','images','jslibs','php','php2html']);
 gulp.task('watchify', ['default', 'watch']);
-gulp.task('watcher', ['watch', 'css', 'fonts', 'jscripts', 'images', 'jslibs', 'php']);
-gulp.task('serve', ['watch', 'css', 'fonts', 'jscripts', 'images', 'jslibs', 'php', 'webserver']);
-gulp.task('git-deploy', [ 'css', 'fonts', 'jscripts', 'images', 'jslibs',  'php', 'heroku']);
+gulp.task('serve', ['watchify', 'webserver']);
+gulp.task('deploy', [ 'default', 'heroku']);
 

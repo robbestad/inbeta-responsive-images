@@ -73,9 +73,11 @@ if (@$details->country === "NO") {
     <p><em><a href="http://caniuse.com/#search=picture">&lt;picture&gt;</a></em> for responsive images. You need a cutting
     edge browser (like Chrome Canary) for this to work.
 </p><p>
-This demo shows you a 320x480 image with different resolutions depending on your viewport.
-This is an improvement on scaling images responsively, because the browser
-is actually downloading just the image that is appropriate for your screen.
+This demo loads a 320x480 image with different resolutions depending on your viewport.
+This is an improvement on simply scaling the images responsively with media queries,
+because instead of downloading a single image that is scaled up and down, now the
+browser is only downloading the appropriate image. This leads to a smaller footprint
+for mobile devices, resulting in shorter download times and faster web pages.
 </p>
     </div>
 
@@ -93,7 +95,7 @@ is actually downloading just the image that is appropriate for your screen.
             <picture>
                 <source media="(min-width: 1000px)" srcset="img/p4x.png">
                 <source media="(min-width: 640px)" srcset="img/p3x.png">
-                <source media="(min-width: 480px)" srcset="img/p1x.png">
+                <source media="(min-width: 480px)" srcset="img/p2x.png">
                 <img src="img/p1x.png"  width="320" height="480" alt="Fun Game"
                    class="img img-responsive">
             </picture>
