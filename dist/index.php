@@ -70,8 +70,13 @@ if (@$details->country === "NO") {
     <div class="col-xs-12 ">
     This demo compares the result of using <em>
     <a href="http://caniuse.com/#search=srcset">&lt;srcset&gt;</a></em> or
-    <em><a href="http://caniuse.com/#search=picture">&lt;picture&gt;</a></em> for responsive images. You need a cutting
+    <p><em><a href="http://caniuse.com/#search=picture">&lt;picture&gt;</a></em> for responsive images. You need a cutting
     edge browser (like Chrome Canary) for this to work.
+</p><p>
+This demo shows you a 320x480 image with different resolutions depending on your viewport.
+This is an improvement on scaling images responsively, because the browser
+is actually downloading just the image that is appropriate for your screen.
+</p>
     </div>
 
         <div class="col-xs-6 ">
