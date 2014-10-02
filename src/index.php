@@ -108,7 +108,7 @@ for mobile devices, resulting in shorter download times and faster web pages.
 
     <div id="footer">
 
-        Copyright &copy; <?php echo date("Y"); ?> - Sven Anders Robbestad - License: CC - Source: <a href="https://github.com/svenanders/inbeta-picture-element">github.com</a>
+        Copyright &copy; <?php echo date("Y"); ?> - Sven Anders Robbestad - License: CC <!-- - Source: <a href="https://github.com/svenanders/inbeta-picture-element">github.com</a> -->
     </div>
 
 </div>
