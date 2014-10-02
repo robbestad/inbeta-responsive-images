@@ -49,6 +49,10 @@ if (@$details->country === "NO") {
     $l_kontakt = "Contact";
     $l_kode = "Code";
 }
+ $l_hjem = "Home";
+    $l_om = "About";
+    $l_kontakt = "Contact";
+    $l_kode = "Code";
 ?>
 
 <div class="container-fluid">
