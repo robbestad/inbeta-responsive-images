@@ -51,7 +51,7 @@ if (@$details->country === "NO") {
 }
 ?>
 
-<div class="container">
+<div class="container-fluid">
     <div class="header">
         <ul class="nav nav-pills pull-right">
             <li class="active"><a href="index.html"><?php echo $l_hjem; ?></a></li>
@@ -61,61 +61,29 @@ if (@$details->country === "NO") {
         <h3 class="text-muted" id="content">Headline</h3>
     </div>
 
-    <div class="jumbotron">
 
-        <?php if (@$details->country === "NO") { ?>
-        <p>
-            Les også bloggartikkelen på
-            <a href="http://www.inbeta.no/?p=928">Inbeta.no</a></p>
+    <div class="row marketing col-centered">
+        <div class="col-xs-6 ">
+        <h3>srcset</h3>
+        <img class="img img-responsive"
+           width="320" height="480" src="img/s1x.png"
+           srcset="img/s2x.png 480w, img/s3x.png 640w, img/s4x.png 1000w"
+           alt="Fun game">
 
-        </p>
-        <p>
-            Hvis du ser bildet med SMALL printet øverst til høyre, støtter ikke din nettleser det nye
-            picture-elementet. Dersom du ser HIRES eller MEDIUM, så skaler websiden opp eller ned for å se at den
-            endrer seg dynamisk. Dette er ikke gjort i CSS, men innenfor rammene til det nye elementet i
-            <a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#the-picture-element">
-                HTML-standarden</a>.
-        </p>
-        <?php } else { ?>
-            <p>This demo shows you whether your browser supports the new <em>picture</em>-element, and will show
-                you either a <strong>SMALL</strong>, <strong>MEDIUM</strong> or <strong>HIRES</strong> version
-                of Rembrandt's self portrait (image is released through a Creative Commons license).</p>
 
-            <p>If you see the <strong>SMALL</strong> image, your browser doesn't support the element yet. (Your best bet
-                at the moment is Chrome Canary, but have a look at <a href="http://caniuse.com/#search=picture">this page
-                    </a> to check the time table for when it will be supported. The element is in the <a
-                    href="http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#the-picture-element">
-                    HTML standard</a>, so all browser will eventually support it.)
-                If you see any of the others, try scaling the page up or down to see the image change dynamically.
-                This is not done with CSS & media queries, but is done within the confines of the new element.</p>
-        <?php } ?>
-    </div>
-
-    <div class="row marketing">
-        <div class="col-md-6 col-xs-12">
+         </div>
+         <div class="col-xs-6 ">
+        <h3>picture</h3>
             <picture>
-                <source media="(min-width: 45em)" srcset="img/large.jpg">
-                <source media="(min-width: 32em)" srcset="img/med.jpg">
-                <img src="img/small.jpg" alt="Rembrandt" class="img img-responsive">
+                <source media="(min-width: 1000px)" srcset="img/p4x.png">
+                <source media="(min-width: 640px)" srcset="img/p3x.png">
+                <source media="(min-width: 480px)" srcset="img/p1x.png">
+                <img src="img/p1x.png"  width="320" height="480" alt="Fun Game"
+                   class="img img-responsive">
             </picture>
-        </div>
-        <div class="col-md-6 col-xs-12">
-<pre><?php echo $l_kode; ?>:
-&lt;picture&gt;
-&lt;source media=&quot;(min-width: 45em)&quot;
-    srcset=&quot;img/large.jpg&quot;&gt;
-&lt;source media=&quot;(min-width: 32em)&quot;
-    srcset=&quot;img/med.jpg&quot;&gt;
-&lt;img src=&quot;img/small.jpg&quot;
-    width=&quot;300&quot; height=&quot;363&quot;
-    alt=&quot;Rembrandt - selvportrett&quot;&gt;
-&lt;/picture&gt;
-</pre>
-            <?php if (@$details->country !== "NO") { ?>
-                <p>Note: This demo is based on a blog article found at
-                    <a href="http://www.inbeta.no/?p=928">Inbeta.no</a></p>
-            <?php } ?>
-        </div>
+
+         </div>
+
     </div>
 
     <div id="footer">

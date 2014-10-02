@@ -51,7 +51,7 @@ if (@$details->country === "NO") {
 }
 ?>
 
-<div class="container">
+<div class="container-fluid">
     <div class="header">
         <ul class="nav nav-pills pull-right">
             <li class="active"><a href="index.html"><?php echo $l_hjem; ?></a></li>
@@ -61,33 +61,29 @@ if (@$details->country === "NO") {
         <h3 class="text-muted" id="content">Headline</h3>
     </div>
 
-    <div class="jumbotron">
 
-        <?php if (@$details->country === "NO") { ?>
+    <div class="row marketing col-centered">
+        <div class="col-xs-6 ">
+        <h3>srcset</h3>
+        <img class="img img-responsive"
+           width="320" height="480" src="img/s1x.png"
+           srcset="img/s2x.png 480w, img/s3x.png 640w, img/s4x.png 1000w"
+           alt="Fun game">
 
-        <?php } else { ?>
-            <p>This demo shows you whether your browser supports the new <em>picture</em>-element, and will show
-                you either a <strong>SMALL</strong>, <strong>MEDIUM</strong> or <strong>HIRES</strong> version
-                of Rembrandt's self portrait (image is released through a Creative Commons license).</p>
-      <?php } ?>
-    </div>
 
-    <div class="row marketing">
-        <div class="col-md-6 col-xs-12">
-        <img src="img/s1x.png" srcset="s2x.png 480w, s3x.png 640w, s4x.png 1000w" alt="Fun game">
-<!--
-            <picture>
-                <source media="(min-width: 45em)" srcset="img/large.jpg">
-                <source media="(min-width: 32em)" srcset="img/med.jpg">
-                <img src="img/small.jpg" alt="Rembrandt" class="img img-responsive">
-            </picture>
- -->
          </div>
-        <div class="col-md-6 col-xs-12">
-<pre><?php echo $l_kode; ?>:
-source...
-</pre>
-        </div>
+         <div class="col-xs-6 ">
+        <h3>picture</h3>
+            <picture>
+                <source media="(min-width: 1000px)" srcset="img/p4x.png">
+                <source media="(min-width: 640px)" srcset="img/p3x.png">
+                <source media="(min-width: 480px)" srcset="img/p1x.png">
+                <img src="img/p1x.png"  width="320" height="480" alt="Fun Game"
+                   class="img img-responsive">
+            </picture>
+
+         </div>
+
     </div>
 
     <div id="footer">

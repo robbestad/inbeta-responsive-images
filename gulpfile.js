@@ -110,7 +110,7 @@ gulp.task('less', function () {
 
 gulp.task('css', ['less', 'sass'], function () {
     return gulp.src([
-          'src/css/bootstrap.css', 
+          'src/css/bootstrap.css',
           'src/css/font-awesome.css',
           'src/css/main.css'
     ])
@@ -166,14 +166,14 @@ gulp.task('git-commit', ['git-add'], function(){
 gulp.task('images', function () {
     return gulp.src(paths.images)
         // Pass in options to the task
-        .pipe(imagemin({
+       /* .pipe(imagemin({
             optimizationLevel: 5,
             progressive: true,
             svgoPlugins: [
                 {removeViewBox: false}
             ],
             use: [pngcrush()]
-        }))
+        }))*/
         .pipe(gulp.dest('dist/img'))
         .pipe(gulp.dest('build/img'));
 });
@@ -186,7 +186,7 @@ gulp.task('heroku', shell.task([
 ]));
 
 // Execute the built-in webserver
-gulp.task('webserver', function () {
+gulp.task('old_webserver', function () {
     gulp.src('dist')
         .pipe(webserver({
             livereload: true,
@@ -195,6 +195,15 @@ gulp.task('webserver', function () {
             directoryListing: false,
             open: true
         }));
+});
+
+// Execute the built-in webserver
+gulp.task('webserver', function () {
+    browserSync({
+        server: {
+            baseDir: "./dist"
+        }
+    });
 });
 
 // Rerun the task when a file changes
@@ -211,7 +220,7 @@ gulp.task('watch', function () {
 });
 
 // gulp main tasks
-gulp.task('default', ['css','jscripts','images','jslibs','php']);
+gulp.task('default', ['css','jscripts','images','jslibs','php','php2html']);
 gulp.task('watchify', ['default', 'watch']);
 gulp.task('watcher', ['watch', 'css', 'fonts', 'jscripts', 'images', 'jslibs', 'php']);
 gulp.task('serve', ['watch', 'css', 'fonts', 'jscripts', 'images', 'jslibs', 'php', 'webserver']);
