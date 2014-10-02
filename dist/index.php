@@ -63,11 +63,18 @@ if (@$details->country === "NO") {
 
 
     <div class="row marketing col-centered">
+    <div class="col-xs-12 ">
+    This demo compares the result of using <em>
+    <a href="http://caniuse.com/#search=srcset">&lt;srcset&gt;</a></em> or
+    <em><a href="http://caniuse.com/#search=picture">&lt;picture&gt;</a></em> for responsive images. You need a cutting
+    edge browser (like Chrome Canary) for this to work.
+    </div>
+
         <div class="col-xs-6 ">
         <h3>srcset</h3>
         <img class="img img-responsive"
            width="320" height="480" src="img/s1x.png"
-           srcset="img/s2x.png 480w, img/s3x.png 640w, img/s4x.png 1000w"
+           srcset="img/s2x.png 480vw, img/s3x.png 640vw, img/s4x.png 1000vw"
            alt="Fun game">
 
 
