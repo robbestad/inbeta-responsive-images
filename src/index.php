@@ -87,7 +87,7 @@ for mobile devices, resulting in shorter download times and faster web pages.
         <h3>&lt;srcset&gt;</h3>
         <img class="img img-responsive"
            width="320" height="480" src="img/s1x.png"
-           srcset="img/s2x.png 480vw, img/s3x.png 640vw, img/s4x.png 1000vw"
+           srcset="img/s2x.png 480w, img/s3x.png 640w, img/s4x.png 1000w"
            alt="Fun game">
 
 
