@@ -40,17 +40,17 @@ echo "-->";
 
 if (@$details->country === "NO") {
     $l_hjem = "Hjem";
-    $l_om = "Om";
+    $l_om = "Blog";
     $l_kontakt = "Kontakt";
     $l_kode = "Kode";
 } else {
     $l_hjem = "Home";
-    $l_om = "About";
+    $l_om = "Blog";
     $l_kontakt = "Contact";
     $l_kode = "Code";
 }
  $l_hjem = "Home";
-    $l_om = "About";
+    $l_om = "Blog";
     $l_kontakt = "Contact";
     $l_kode = "Code";
 ?>
@@ -58,9 +58,10 @@ if (@$details->country === "NO") {
 <div class="container-fluid">
     <div class="header">
         <ul class="nav nav-pills pull-right">
-            <li class="active"><a href="index.html"><?php echo $l_hjem; ?></a></li>
+           <!--  <li class="active"><a href="index.html"><?php echo $l_hjem; ?></a></li> -->
             <li><a href="http://www.robbestad.com"><?php echo $l_om; ?></a></li>
             <li><a href="mailto:anders@robbestad.com"><?php echo $l_kontakt; ?></a></li>
+        <li><a href="http://www.inmeta.no"><img src="img/inmeta.svg" width="100" ></a></li>
         </ul>
         <h3 class="text-muted" id="content">Headline</h3>
     </div>
@@ -71,7 +72,8 @@ if (@$details->country === "NO") {
     This demo compares the result of using <em>
     <a href="http://caniuse.com/#search=srcset">&lt;srcset&gt;</a></em> or
     <p><em><a href="http://caniuse.com/#search=picture">&lt;picture&gt;</a></em> for responsive images. You need a cutting
-    edge browser (like Chrome Canary) for this to work.
+    edge browser (like <a href="http://www.google.com/intl/no/chrome/browser/canary.html">
+    Chrome Canary</a>) for this to work.
 </p><p>
 This demo loads a 320x480 image with different resolutions depending on your viewport.
 This is an improvement on simply scaling the images responsively with media queries,
