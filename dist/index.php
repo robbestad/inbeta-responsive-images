@@ -77,14 +77,14 @@ if (@$details->country === "NO") {
 </p><p>
 This demo loads a 320x480 image with different resolutions depending on your viewport.
 This is an improvement on simply scaling the images responsively with media queries,
-because instead of downloading a single image that is scaled up and down, now the
-browser is only downloading the appropriate image. This leads to a smaller footprint
+because instead of downloading a single image that is scaled up and down, the
+browser is now only downloading the appropriate image. This leads to a smaller footprint
 for mobile devices, resulting in shorter download times and faster web pages.
 </p>
     </div>
 
         <div class="col-xs-6 ">
-        <h3>srcset</h3>
+        <h3>&lt;srcset&gt;</h3>
         <img class="img img-responsive"
            width="320" height="480" src="img/s1x.png"
            srcset="img/s2x.png 480vw, img/s3x.png 640vw, img/s4x.png 1000vw"
@@ -93,7 +93,7 @@ for mobile devices, resulting in shorter download times and faster web pages.
 
          </div>
          <div class="col-xs-6 ">
-        <h3>picture</h3>
+        <h3>&lt;picture&gt;</h3>
             <picture>
                 <source media="(min-width: 1000px)" srcset="img/p4x.png">
                 <source media="(min-width: 640px)" srcset="img/p3x.png">
@@ -103,6 +103,22 @@ for mobile devices, resulting in shorter download times and faster web pages.
             </picture>
 
          </div>
+
+ <div class="col-xs-12 ">
+<hr>
+  For more information, check out the following resources:
+<ul>
+<li>
+  <a href="http://www.inbeta.no/2014/09/23/hvordan-et-nytt-element-vil-gjore-nettet-raskere/
+">This new element will make the web go faster</a (in norwegian)
+</li>
+<li><a href="http://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/?utm_source=html5weekly&utm_medium=email">
+  Responsive Images: If you’re just changing resolutions, use srcset.
+</a>
+</li>
+</ul>
+</div>
+
 
     </div>
 
